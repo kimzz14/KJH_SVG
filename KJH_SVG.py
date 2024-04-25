@@ -1,5 +1,6 @@
 class element:
     def __init__(self,name, container):
+        self.isVisable = True
         self.name = name
         self.attr_DICT = {}
         self.attrKey_LIST = []
@@ -34,6 +35,7 @@ class element:
             self.styleKey_LIST += [key]
         return self
     def __repr__(self):
+        if self.isVisable == False: return ''
         tag = '<'+ self.name
         for attrKey in self.attrKey_LIST:
             tag += ' ' + attrKey + '=' + '"' + str(self.attr_DICT[attrKey]) + '"'
