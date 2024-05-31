@@ -10,7 +10,7 @@ class element:
 
         if container != None:
             container.add(self)
-        self.default()
+        #self.default()
     def default(self):
         self.style('box-sizing', 'border-box')
         self.style('float', 'left')
